@@ -3,548 +3,820 @@
 # Program 1: Sum of Integers from 1 to n
 
 ## Aim
-To find the sum of first N natural numbers using recursion.
 
-## Algorithm
+To find the sum of the first N natural numbers using recursion.
 
-1. Start.
-2. Read the value of N.
-3. If N = 0, return 0.
-4. Otherwise compute Sum(N−1).
-5. Add N to the previous sum.
-6. Display the result.
-7. Stop.
+## Pseudocode
+
+```text
+BEGIN
+INPUT N
+IF N = 0 THEN
+    RETURN 0
+ELSE
+    SUM = SUM(N-1) + N
+END IF
+DISPLAY SUM
+END
+```
 
 ## Query
 
+```prolog
 ?- sum(5,S).
+```
 
 ## Output
 
+```text
 S = 15.
+```
 
 ---
 
 # Program 2: Name and Date of Birth Database
 
 ## Aim
-To create a database storing names and dates of birth.
 
-## Algorithm
+To create a database of persons and their dates of birth.
 
-1. Start.
-2. Store person names and DOB as facts.
-3. Accept a person's name.
-4. Search the database.
-5. Display the DOB.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE person's name and date of birth
+INPUT person's name
+SEARCH the database
+DISPLAY date of birth
+END
+```
 
 ## Query
 
+```prolog
 ?- person(arun,DOB).
+```
 
 ## Output
 
+```text
 DOB = '10-05-2003'.
+```
 
 ---
 
-# Program 3: Student, Teacher and Subject Database
+# Program 3: Create a Database of Students, Teachers and Subjects
 
 ## Aim
-To create a simple educational database.
 
-## Algorithm
+To create a database containing students, teachers and subjects.
 
-1. Start.
-2. Store students.
-3. Store teachers.
-4. Store subjects.
-5. Store teaching relationships.
-6. Store studying relationships.
-7. Execute query.
-8. Display result.
-9. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE student details
+STORE teacher details
+STORE subject details
+STORE teaching relationship
+STORE studying relationship
+INPUT query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- teaches(ramesh,maths).
+```
 
 ## Output
 
+```text
 true.
+```
+
+### Query
+
+```prolog
+?- studies(arun,maths).
+```
+
+### Output
+
+```text
+true.
+```
 
 ---
 
 # Program 4: Database of Planets
 
 ## Aim
-To create a database containing planets and their distance.
 
-## Algorithm
+To create a database of planets and their distances.
 
-1. Start.
-2. Store planet names.
-3. Store distances.
-4. Execute query.
-5. Display output.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE planet names
+STORE planet distances
+INPUT planet name
+SEARCH database
+DISPLAY distance
+END
+```
 
 ## Query
 
+```prolog
 ?- distance(earth,D).
+```
 
 ## Output
 
+```text
 D = 150.
+```
 
 ---
 
 # Program 5: Towers of Hanoi
 
 ## Aim
-To solve the Towers of Hanoi problem recursively.
 
-## Algorithm
+To solve the Towers of Hanoi problem using recursion.
 
-1. Start.
-2. If only one disk exists, move it.
-3. Move N−1 disks to auxiliary rod.
-4. Move largest disk.
-5. Move remaining disks.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+IF number of disks = 1 THEN
+    MOVE disk to destination
+ELSE
+    MOVE N-1 disks to auxiliary rod
+    MOVE largest disk
+    MOVE N-1 disks to destination
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- hanoi(3,left,right,center).
+```
 
 ## Output
 
-Move disk 1...
-Move disk 2...
-Move disk 3...
+```text
+Move disk 1 from left to right
+Move disk 2 from left to center
+Move disk 1 from right to center
+Move disk 3 from left to right
+Move disk 1 from center to left
+Move disk 2 from center to right
+Move disk 1 from left to right
+```
 
 ---
 
 # Program 6: Bird Can Fly or Not
 
 ## Aim
+
 To determine whether a bird can fly.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store bird names.
-3. Store birds that cannot fly.
-4. Check whether bird is in cannot_fly list.
-5. Display result.
-6. Stop.
+```text
+BEGIN
+STORE bird names
+STORE birds that cannot fly
+INPUT bird name
+IF bird can fly THEN
+    DISPLAY true
+ELSE
+    DISPLAY false
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- can_fly(parrot).
+```
 
 ## Output
 
+```text
 true.
+```
 
-## Query
+### Query
 
+```prolog
 ?- can_fly(penguin).
+```
 
 ## Output
 
+```text
 false.
+```
 
 ---
 
 # Program 7: Family Tree
 
 ## Aim
-To represent family relationships.
 
-## Algorithm
+To represent family relationships using Prolog facts and rules.
 
-1. Start.
-2. Store parent facts.
-3. Store male and female facts.
-4. Define father rule.
-5. Define mother rule.
-6. Define grandparent rule.
-7. Execute query.
-8. Display result.
-9. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE parent relationships
+STORE male and female facts
+DEFINE father rule
+DEFINE mother rule
+DEFINE grandparent rule
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- father(john,david).
+```
 
 ## Output
 
+```text
 true.
+```
+
+### Query
+
+```prolog
+?- mother(mary,david).
+```
+
+## Output
+
+```text
+true.
+```
+
+### Query
+
+```prolog
+?- grandparent(john,peter).
+```
+
+## Output
+
+```text
+true.
+```
 
 ---
 
 # Program 8: Dieting System
 
 ## Aim
-To recommend diet based on health condition.
 
-## Algorithm
+To recommend a suitable diet based on health conditions.
 
-1. Start.
-2. Store health conditions.
-3. Store diet recommendation.
-4. Execute query.
-5. Display recommended diet.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE disease and diet details
+INPUT disease
+SEARCH database
+DISPLAY recommended diet
+END
+```
 
 ## Query
 
+```prolog
 ?- diet(bp,X).
+```
 
 ## Output
 
+```text
 X = low_salt.
----
+```
 
 # Program 9: Monkey Banana Problem
 
 ## Aim
-To determine whether the monkey can get the banana.
 
-## Algorithm
+To determine whether the monkey can obtain the banana.
 
-1. Start.
-2. Store the objects possessed by the monkey.
-3. Check if the monkey has both the box and the banana.
-4. If yes, display that the monkey can get the banana.
-5. Otherwise, display failure.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE monkey facts
+CHECK whether monkey has box
+CHECK whether monkey has banana
+IF both are available THEN
+    DISPLAY monkey can get banana
+ELSE
+    DISPLAY monkey cannot get banana
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- can_get_banana.
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Program 10: Fruit and Color Database
 
 ## Aim
+
 To create a database of fruits and their colors.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store fruit names and their colors.
-3. Accept a fruit name.
-4. Search the database.
-5. Display the corresponding color.
-6. Stop.
+```text
+BEGIN
+STORE fruit names
+STORE corresponding colors
+INPUT fruit name
+SEARCH database
+DISPLAY fruit color
+END
+```
 
 ## Query
 
+```prolog
 ?- fruit(apple,Color).
+```
 
 ## Output
 
+```text
 Color = red.
+```
+
+### Query
+
+```prolog
+?- fruit(mango,Color).
+```
+
+### Output
+
+```text
+Color = yellow.
+```
 
 ---
 
 # Program 11: Best First Search
 
 ## Aim
-To implement Best First Search using graph traversal.
 
-## Algorithm
+To perform graph traversal using Best First Search.
 
-1. Start.
-2. Store graph edges.
-3. Select the starting node.
-4. Visit connected nodes.
-5. Continue until the goal node is reached.
-6. Display the path.
-7. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE graph edges
+SELECT starting node
+VISIT adjacent node
+IF destination reached THEN
+    DISPLAY success
+ELSE
+    CONTINUE traversal
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- best_first(a,g).
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Program 12: Medical Diagnosis Expert System
 
 ## Aim
+
 To identify diseases based on symptoms.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store symptoms and diseases.
-3. Accept a symptom.
-4. Search the knowledge base.
-5. Display the disease.
-6. Stop.
+```text
+BEGIN
+STORE symptoms
+STORE diseases
+INPUT symptom
+SEARCH knowledge base
+DISPLAY disease
+END
+```
 
 ## Query
 
+```prolog
 ?- disease(fever,X).
+```
 
 ## Output
 
+```text
 X = flu.
+```
 
 ---
 
 # Program 13: Forward Chaining
 
 ## Aim
-To demonstrate Forward Chaining in Prolog.
 
-## Algorithm
+To infer conclusions using forward chaining.
 
-1. Start.
-2. Store known facts.
-3. Apply inference rules.
-4. Derive new facts.
-5. Display the inferred result.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE known facts
+APPLY inference rules
+GENERATE new facts
+DISPLAY inferred conclusion
+END
+```
 
 ## Query
 
+```prolog
 ?- disease(john,flu).
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Program 14: Backward Chaining
 
 ## Aim
-To demonstrate Backward Chaining.
 
-## Algorithm
+To infer conclusions using backward chaining.
 
-1. Start.
-2. Accept a goal.
-3. Search for matching rules.
-4. Verify required facts.
-5. If all facts are true, prove the goal.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+INPUT goal
+SEARCH matching rule
+VERIFY supporting facts
+IF facts are true THEN
+    DISPLAY goal proved
+ELSE
+    DISPLAY goal failed
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- flu(raja).
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Program 15: Marcus Program
 
 ## Aim
+
 To demonstrate logical reasoning using facts and rules.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store facts about Marcus and Caesar.
-3. Define Roman, loyal and hate rules.
-4. Execute the required query.
-5. Display the logical result.
-6. Stop.
+```text
+BEGIN
+STORE facts about Marcus
+STORE facts about Caesar
+DEFINE Roman rule
+DEFINE Loyal rule
+DEFINE Hate rule
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- loyal(marcus,caesar).
+```
 
 ## Output
 
+```text
 true.
+```
 
-## Query
+### Query
 
+```prolog
 ?- hates(marcus,caesar).
+```
 
-## Output
+### Output
 
+```text
 false.
+```
 
 ---
 
 # Program 16: John Likes Peanuts
 
 ## Aim
+
 To represent a simple fact in Prolog.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store the fact that John likes peanuts.
-3. Execute the query.
-4. Display the result.
-5. Stop.
+```text
+BEGIN
+STORE the fact that John likes peanuts
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- likes(john,peanuts).
+```
 
 ## Output
 
+```text
 true.
----
+```
 
 # Program 17: John Likes All Kinds of Food
 
 ## Aim
+
 To demonstrate the use of rules in Prolog.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store different food items.
-3. Define the rule that John likes all food.
-4. Execute the query.
-5. Display the result.
-6. Stop.
+```text
+BEGIN
+STORE food items
+DEFINE rule that John likes every food item
+INPUT food item
+IF item is food THEN
+    DISPLAY true
+ELSE
+    DISPLAY false
+END IF
+END
+```
 
 ## Query
 
+```prolog
 ?- likes(john,pizza).
+```
 
 ## Output
 
+```text
 true.
+```
+
+### Query
+
+```prolog
+?- likes(john,mango).
+```
+
+### Output
+
+```text
+true.
+```
 
 ---
 
 # Program 18: Harry Eats Everything That Anil Eats
 
 ## Aim
+
 To demonstrate inheritance of facts using rules.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store the food eaten by Anil.
-3. Define the rule that Harry eats everything Anil eats.
-4. Execute the query.
-5. Display the result.
-6. Stop.
+```text
+BEGIN
+STORE foods eaten by Anil
+DEFINE rule that Harry eats everything Anil eats
+INPUT food item
+CHECK whether Anil eats the food
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- eats(harry,peanuts).
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Program 19: Anil Eats Peanuts and Is Still Alive
 
 ## Aim
+
 To represent simple facts using Prolog.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store the fact that Anil eats peanuts.
-3. Store the fact that Anil is alive.
-4. Execute the queries.
-5. Display the results.
-6. Stop.
+```text
+BEGIN
+STORE fact that Anil eats peanuts
+STORE fact that Anil is alive
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- eats(anil,peanuts).
+```
 
 ## Output
 
+```text
 true.
+```
 
-## Query
+### Query
 
+```prolog
 ?- alive(anil).
+```
 
-## Output
+### Output
 
+```text
 true.
+```
 
 ---
 
 # Program 20: Anything Anyone Eats and Is Not Killed Is Food
 
 ## Aim
+
 To identify food using logical rules.
 
-## Algorithm
+## Pseudocode
 
-1. Start.
-2. Store facts about what different people eat.
-3. Store information about who is killed.
-4. Define a rule to identify food.
-5. Execute the query.
-6. Display the result.
-7. Stop.
+```text
+BEGIN
+STORE eating facts
+STORE killed facts
+DEFINE rule:
+IF a person eats something
+AND the person is not killed
+THEN it is food
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- food(apple).
+```
 
 ## Output
 
+```text
 true.
+```
+
+### Query
+
+```prolog
+?- food(rice).
+```
+
+## Output
+
+```text
+true.
+```
 
 ---
 
 # Program 21: Apples and Vegetables Are Food
 
 ## Aim
-To represent food facts and determine John's preferences.
 
-## Algorithm
+To identify food items and determine John's preferences.
 
-1. Start.
-2. Store apple and vegetable as food.
-3. Define the rule that John likes every food item.
-4. Execute the query.
-5. Display the result.
-6. Stop.
+## Pseudocode
+
+```text
+BEGIN
+STORE apple as food
+STORE vegetable as food
+DEFINE rule that John likes every food item
+EXECUTE query
+DISPLAY result
+END
+```
 
 ## Query
 
+```prolog
 ?- likes(john,apple).
+```
 
 ## Output
 
+```text
 true.
+```
 
-## Query
+### Query
 
+```prolog
 ?- likes(john,vegetable).
+```
 
 ## Output
 
+```text
 true.
+```
 
 ---
 
 # Conclusion
 
-These Prolog programs demonstrate the use of facts, rules, recursion, databases, expert systems, forward chaining, backward chaining, graph search, and logical reasoning. The experiments were successfully implemented and executed using SWI-Prolog.
+The Prolog experiments were successfully implemented using SWI-Prolog. These programs demonstrate the use of facts, rules, recursion, databases, family relationships, graph search, expert systems, forward chaining, backward chaining, and logical reasoning. The outputs obtained verify the correctness of the implemented Prolog programs.
 
