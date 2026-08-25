@@ -1,0 +1,31 @@
+|--- Credit_History <= 0.50
+|   |--- LoanAmount_log <= 6.17
+|   |   |--- CoapplicantIncome <= 8115.00
+|   |   |   |--- LoanAmount <= 156.00
+|   |   |   |   |--- class: 0
+|   |   |   |--- LoanAmount >  156.00
+|   |   |   |   |--- class: 0
+|   |   |--- CoapplicantIncome >  8115.00
+|   |   |   |--- class: 1
+|   |--- LoanAmount_log >  6.17
+|   |   |--- class: 1
+|--- Credit_History >  0.50
+|   |--- IncomeToLoanRatio <= 26.93
+|   |   |--- TotalIncome <= 3378.00
+|   |   |   |--- ApplicantIncome <= 2106.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- ApplicantIncome >  2106.50
+|   |   |   |   |--- class: 1
+|   |   |--- TotalIncome >  3378.00
+|   |   |   |--- class: 0
+|   |--- IncomeToLoanRatio >  26.93
+|   |   |--- TotalIncome_log <= 7.78
+|   |   |   |--- LoanAmount <= 63.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- LoanAmount >  63.50
+|   |   |   |   |--- class: 1
+|   |   |--- TotalIncome_log >  7.78
+|   |   |   |--- ApplicantIncome <= 3511.00
+|   |   |   |   |--- class: 1
+|   |   |   |--- ApplicantIncome >  3511.00
+|   |   |   |   |--- class: 1
