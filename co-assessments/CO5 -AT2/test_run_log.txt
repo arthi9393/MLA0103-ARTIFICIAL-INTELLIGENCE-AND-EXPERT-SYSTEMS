@@ -1,0 +1,438 @@
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case1
+############################################################
+Known symptoms:
+  - engine_overheating
+Known observations:
+  - coolant_level_low
+  - radiator_leak_visible
+
+=== FORWARD CHAINING TRACE for case1 ===
+[Rule r1] all conditions [engine_overheating,coolant_level_low,radiator_leak_visible] satisfied -> DERIVED: cooling_system_failure
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case1 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case1
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' satisfied: matches known OBSERVATION
+   [r1] condition 'radiator_leak_visible' satisfied: matches known OBSERVATION
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case1
+   [r2] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r2] condition 'thermostat_stuck' FAILED - no matching fact or sub-goal
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case1
+   [r3] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r3] condition 'fan_not_working' FAILED - no matching fact or sub-goal
+[BC] Trying rule r4 to prove goal 'weak_battery' for case1
+   [r4] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case1
+   [r5] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case1
+   [r6] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case1
+   [r7] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case1
+   [r8] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case1
+   [r9] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case1
+   [r10] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case1
+   [r11] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case1
+   [r12] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case1
+   [r13] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case1
+   [r14] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case1
+   [r15] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case1
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case1
+   [r17] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case1
+   [r18] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case1
+   [r19] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case1
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case1
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' satisfied: matches known OBSERVATION
+   [r1] condition 'radiator_leak_visible' satisfied: matches known OBSERVATION
+   [r20] condition 'cooling_system_failure' satisfied: proven via CHAINED SUB-GOAL
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case1
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+   [r20] condition 'oil_pressure_fault' FAILED - no matching fact or sub-goal
+
+All faults provable for case1 (via backtracking over rules): [cooling_system_failure]
+
+Recommended actions:
+  * cooling_system_failure -> Pressure-test cooling system, repair/replace radiator or hose, refill coolant, re-test for leaks.
+############################################################
+
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case2
+############################################################
+Known symptoms:
+  - difficulty_starting
+Known observations:
+  - battery_voltage_low
+  - slow_cranking
+
+=== FORWARD CHAINING TRACE for case2 ===
+[Rule r4] all conditions [difficulty_starting,battery_voltage_low,slow_cranking] satisfied -> DERIVED: weak_battery
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case2 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case2
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case2
+   [r2] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case2
+   [r3] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r4 to prove goal 'weak_battery' for case2
+   [r4] condition 'difficulty_starting' satisfied: matches known SYMPTOM
+   [r4] condition 'battery_voltage_low' satisfied: matches known OBSERVATION
+   [r4] condition 'slow_cranking' satisfied: matches known OBSERVATION
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case2
+   [r5] condition 'difficulty_starting' satisfied: matches known SYMPTOM
+   [r5] condition 'clicking_sound_on_start' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case2
+   [r6] condition 'difficulty_starting' satisfied: matches known SYMPTOM
+   [r6] condition 'fuel_smell_no_start' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case2
+   [r7] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case2
+   [r8] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case2
+   [r9] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case2
+   [r10] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case2
+   [r11] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case2
+   [r12] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case2
+   [r13] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case2
+   [r14] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case2
+   [r15] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case2
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case2
+   [r17] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case2
+   [r18] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case2
+   [r19] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case2
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case2
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+   [r20] condition 'cooling_system_failure' FAILED - no matching fact or sub-goal
+
+All faults provable for case2 (via backtracking over rules): [weak_battery]
+
+Recommended actions:
+  * weak_battery -> Test battery health, charge or replace battery, inspect alternator charging output.
+############################################################
+
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case3
+############################################################
+Known symptoms:
+  - abnormal_noise
+Known observations:
+  - knocking_sound
+
+=== FORWARD CHAINING TRACE for case3 ===
+[Rule r8] all conditions [abnormal_noise,knocking_sound] satisfied -> DERIVED: engine_knock_fault
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case3 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case3
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case3
+   [r2] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case3
+   [r3] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r4 to prove goal 'weak_battery' for case3
+   [r4] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case3
+   [r5] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case3
+   [r6] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case3
+   [r7] condition 'abnormal_noise' satisfied: matches known SYMPTOM
+   [r7] condition 'squealing_belt' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case3
+   [r8] condition 'abnormal_noise' satisfied: matches known SYMPTOM
+   [r8] condition 'knocking_sound' satisfied: matches known OBSERVATION
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case3
+   [r9] condition 'abnormal_noise' satisfied: matches known SYMPTOM
+   [r9] condition 'grinding_brake_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case3
+   [r10] condition 'abnormal_noise' satisfied: matches known SYMPTOM
+   [r10] condition 'exhaust_hissing' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case3
+   [r11] condition 'abnormal_noise' satisfied: matches known SYMPTOM
+   [r11] condition 'clunking_suspension' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case3
+   [r12] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case3
+   [r13] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case3
+   [r14] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case3
+   [r15] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case3
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case3
+   [r17] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case3
+   [r18] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case3
+   [r19] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case3
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case3
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+   [r20] condition 'cooling_system_failure' FAILED - no matching fact or sub-goal
+
+All faults provable for case3 (via backtracking over rules): [engine_knock_fault]
+
+Recommended actions:
+  * engine_knock_fault -> Inspect engine bearings, ignition timing and fuel octane rating; schedule detailed engine diagnostics.
+############################################################
+
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case4
+############################################################
+Known symptoms:
+  - low_mileage
+Known observations:
+  - injector_clicking_irregular
+  - black_exhaust_smoke
+
+=== FORWARD CHAINING TRACE for case4 ===
+[Rule r13] all conditions [low_mileage,injector_clicking_irregular,black_exhaust_smoke] satisfied -> DERIVED: fuel_injector_fault
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case4 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case4
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case4
+   [r2] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case4
+   [r3] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+[BC] Trying rule r4 to prove goal 'weak_battery' for case4
+   [r4] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case4
+   [r5] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case4
+   [r6] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case4
+   [r7] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case4
+   [r8] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case4
+   [r9] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case4
+   [r10] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case4
+   [r11] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case4
+   [r12] condition 'low_mileage' satisfied: matches known SYMPTOM
+   [r12] condition 'dirty_air_filter' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case4
+   [r13] condition 'low_mileage' satisfied: matches known SYMPTOM
+   [r13] condition 'injector_clicking_irregular' satisfied: matches known OBSERVATION
+   [r13] condition 'black_exhaust_smoke' satisfied: matches known OBSERVATION
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case4
+   [r14] condition 'low_mileage' satisfied: matches known SYMPTOM
+   [r14] condition 'low_tire_pressure' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case4
+   [r15] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case4
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case4
+   [r17] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case4
+   [r18] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case4
+   [r19] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case4
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case4
+   [r1] condition 'engine_overheating' FAILED - no matching fact or sub-goal
+   [r20] condition 'cooling_system_failure' FAILED - no matching fact or sub-goal
+
+All faults provable for case4 (via backtracking over rules): [fuel_injector_fault]
+
+Recommended actions:
+  * fuel_injector_fault -> Clean or replace faulty fuel injector(s); perform injector balance test.
+############################################################
+
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case5
+############################################################
+Known symptoms:
+  - engine_overheating
+  - warning_light_activation
+Known observations:
+  - coolant_level_low
+  - radiator_leak_visible
+  - oil_pressure_light_on
+
+=== FORWARD CHAINING TRACE for case5 ===
+[Rule r1] all conditions [engine_overheating,coolant_level_low,radiator_leak_visible] satisfied -> DERIVED: cooling_system_failure
+[Rule r16] all conditions [warning_light_activation,oil_pressure_light_on] satisfied -> DERIVED: oil_pressure_fault
+[Rule r20] all conditions [cooling_system_failure,oil_pressure_fault] satisfied -> DERIVED: severe_engine_risk
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case5 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case5
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' satisfied: matches known OBSERVATION
+   [r1] condition 'radiator_leak_visible' satisfied: matches known OBSERVATION
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case5
+   [r2] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r2] condition 'thermostat_stuck' FAILED - no matching fact or sub-goal
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case5
+   [r3] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r3] condition 'fan_not_working' FAILED - no matching fact or sub-goal
+[BC] Trying rule r4 to prove goal 'weak_battery' for case5
+   [r4] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case5
+   [r5] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case5
+   [r6] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case5
+   [r7] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case5
+   [r8] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case5
+   [r9] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case5
+   [r10] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case5
+   [r11] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case5
+   [r12] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case5
+   [r13] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case5
+   [r14] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case5
+   [r15] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r15] condition 'check_engine_on' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case5
+   [r16] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r16] condition 'oil_pressure_light_on' satisfied: matches known OBSERVATION
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case5
+   [r17] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r17] condition 'battery_light_on' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case5
+   [r18] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r18] condition 'brake_light_on' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case5
+   [r19] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r19] condition 'coolant_light_on' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case5
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case5
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' satisfied: matches known OBSERVATION
+   [r1] condition 'radiator_leak_visible' satisfied: matches known OBSERVATION
+   [r20] condition 'cooling_system_failure' satisfied: proven via CHAINED SUB-GOAL
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case5
+   [r16] condition 'warning_light_activation' satisfied: matches known SYMPTOM
+   [r16] condition 'oil_pressure_light_on' satisfied: matches known OBSERVATION
+   [r20] condition 'oil_pressure_fault' satisfied: proven via CHAINED SUB-GOAL
+
+All faults provable for case5 (via backtracking over rules): [cooling_system_failure,oil_pressure_fault,severe_engine_risk]
+
+Recommended actions:
+  * cooling_system_failure -> Pressure-test cooling system, repair/replace radiator or hose, refill coolant, re-test for leaks.
+  * oil_pressure_fault -> Check engine oil level immediately; inspect oil pump and pressure sensor; avoid driving until resolved.
+  * severe_engine_risk -> CRITICAL: Stop the vehicle and do not operate. Combined overheating and low oil pressure risk severe engine damage - immediate workshop inspection required.
+############################################################
+
+
+############################################################
+  FULL DIAGNOSTIC REPORT: case6
+############################################################
+Known symptoms:
+  - engine_overheating
+Known observations:
+  - thermostat_stuck
+  - fan_not_working
+
+=== FORWARD CHAINING TRACE for case6 ===
+[Rule r2] all conditions [engine_overheating,thermostat_stuck] satisfied -> DERIVED: thermostat_fault
+[Rule r3] all conditions [engine_overheating,fan_not_working] satisfied -> DERIVED: radiator_fan_fault
+No further rules fire. Fixpoint reached.
+--- Forward chaining complete for case6 ---
+
+Backward-chaining verification & unification/backtracking sweep:
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case6
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' FAILED - no matching fact or sub-goal
+[BC] Trying rule r2 to prove goal 'thermostat_fault' for case6
+   [r2] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r2] condition 'thermostat_stuck' satisfied: matches known OBSERVATION
+[BC] Trying rule r3 to prove goal 'radiator_fan_fault' for case6
+   [r3] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r3] condition 'fan_not_working' satisfied: matches known OBSERVATION
+[BC] Trying rule r4 to prove goal 'weak_battery' for case6
+   [r4] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r5 to prove goal 'starter_motor_fault' for case6
+   [r5] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r6 to prove goal 'fuel_delivery_fault' for case6
+   [r6] condition 'difficulty_starting' FAILED - no matching fact or sub-goal
+[BC] Trying rule r7 to prove goal 'drive_belt_fault' for case6
+   [r7] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r8 to prove goal 'engine_knock_fault' for case6
+   [r8] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r9 to prove goal 'brake_pad_worn' for case6
+   [r9] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r10 to prove goal 'exhaust_leak' for case6
+   [r10] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r11 to prove goal 'suspension_fault' for case6
+   [r11] condition 'abnormal_noise' FAILED - no matching fact or sub-goal
+[BC] Trying rule r12 to prove goal 'air_filter_clogged' for case6
+   [r12] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r13 to prove goal 'fuel_injector_fault' for case6
+   [r13] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r14 to prove goal 'tire_pressure_fault' for case6
+   [r14] condition 'low_mileage' FAILED - no matching fact or sub-goal
+[BC] Trying rule r15 to prove goal 'engine_management_fault' for case6
+   [r15] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r16 to prove goal 'oil_pressure_fault' for case6
+   [r16] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r17 to prove goal 'charging_system_fault' for case6
+   [r17] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r18 to prove goal 'brake_system_warning' for case6
+   [r18] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r19 to prove goal 'coolant_system_warning' for case6
+   [r19] condition 'warning_light_activation' FAILED - no matching fact or sub-goal
+[BC] Trying rule r20 to prove goal 'severe_engine_risk' for case6
+[BC] Trying rule r1 to prove goal 'cooling_system_failure' for case6
+   [r1] condition 'engine_overheating' satisfied: matches known SYMPTOM
+   [r1] condition 'coolant_level_low' FAILED - no matching fact or sub-goal
+   [r20] condition 'cooling_system_failure' FAILED - no matching fact or sub-goal
+
+All faults provable for case6 (via backtracking over rules): [radiator_fan_fault,thermostat_fault]
+
+Recommended actions:
+  * radiator_fan_fault -> Inspect fan motor/relay/fuse; replace radiator fan assembly if non-functional.
+  * thermostat_fault -> Replace faulty thermostat and refill coolant to correct level.
+############################################################
+
