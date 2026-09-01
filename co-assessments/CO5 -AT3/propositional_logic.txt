@@ -1,0 +1,41 @@
+AUTOMOBILE FAULT DIAGNOSIS – PROPOSITIONAL LOGIC
+
+PROPOSITIONS
+
+O  = Engine is overheating
+C  = Coolant level is low
+W  = Warning light is ON
+S  = Vehicle has starting failure
+B  = Battery is weak
+N  = Abnormal engine noise
+L  = Engine oil level is low
+M  = Vehicle has low mileage
+F  = Fuel consumption is high
+
+D1 = Cooling system failure
+D2 = Engine malfunction
+D3 = Battery problem
+D4 = Lubrication problem
+D5 = Fuel system problem
+
+RULES
+
+R1: O ∧ C → D1
+R2: W ∧ O → D2
+R3: S ∧ B → D3
+R4: N ∧ L → D4
+R5: M ∧ F → D5
+
+EXAMPLE
+
+Given O = True and C = True:
+O ∧ C = True
+Therefore, from O ∧ C → D1:
+D1 = True
+
+Conclusion:
+Cooling system failure is diagnosed.
+
+LIMITATION
+Propositional logic treats each proposition as a complete statement and does not naturally represent individual
+vehicles, variables, or rich component relationships.

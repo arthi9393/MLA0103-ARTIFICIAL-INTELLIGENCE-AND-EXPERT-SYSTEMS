@@ -1,0 +1,31 @@
+AUTOMOBILE FAULT DIAGNOSIS – PRODUCTION RULE MODEL
+
+R1:
+IF engine_overheating AND coolant_low
+THEN cooling_system_failure.
+
+R2:
+IF warning_light_on AND engine_overheating
+THEN engine_malfunction.
+
+R3:
+IF starting_failure AND battery_weak
+THEN battery_problem.
+
+R4:
+IF abnormal_noise AND engine_oil_low
+THEN lubrication_problem.
+
+R5:
+IF low_mileage AND fuel_consumption_high
+THEN fuel_system_problem.
+
+Example:
+Facts:
+engine_overheating
+coolant_low
+
+Using R1:
+engine_overheating AND coolant_low
+        ↓
+cooling_system_failure

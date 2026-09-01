@@ -1,0 +1,50 @@
+AUTOMOBILE FAULT DIAGNOSIS – TEST CASES
+
+Test Case 1
+Vehicle: car1
+Symptoms:
+- Engine overheating
+- Low coolant
+- Warning light ON
+Expected diagnoses:
+- cooling_system_failure
+- engine_malfunction
+
+Prolog query:
+?- fault(car1, Fault).
+
+Test Case 2
+Vehicle: car2
+Symptoms:
+- Starting failure
+- Weak battery
+Expected diagnosis:
+- battery_problem
+
+Prolog query:
+?- fault(car2, Fault).
+
+Test Case 3
+Vehicle: car3
+Symptoms:
+- Abnormal engine noise
+- Low engine oil
+Expected diagnosis:
+- lubrication_problem
+
+Prolog query:
+?- fault(car3, Fault).
+
+Test Case 4
+Vehicle: car4
+Symptoms:
+- Low mileage
+- High fuel consumption
+Expected diagnosis:
+- fuel_system_problem
+
+Prolog query:
+?- fault(car4, Fault).
+
+NOTE:
+Run these queries in your Prolog environment and replace/add actual screenshots of your outputs to the final report.

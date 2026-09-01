@@ -1,0 +1,57 @@
+AUTOMOBILE FAULT DIAGNOSIS – FIRST-ORDER LOGIC MODEL
+
+PREDICATES
+
+Overheating(x)
+LowCoolant(x)
+WarningLight(x)
+StartingFailure(x)
+WeakBattery(x)
+AbnormalNoise(x)
+LowOil(x)
+LowMileage(x)
+HighFuelConsumption(x)
+
+CoolingSystemFailure(x)
+EngineMalfunction(x)
+BatteryProblem(x)
+LubricationProblem(x)
+FuelSystemProblem(x)
+
+FOL RULES
+
+R1:
+∀x [(Overheating(x) ∧ LowCoolant(x)) → CoolingSystemFailure(x)]
+
+R2:
+∀x [(WarningLight(x) ∧ Overheating(x)) → EngineMalfunction(x)]
+
+R3:
+∀x [(StartingFailure(x) ∧ WeakBattery(x)) → BatteryProblem(x)]
+
+R4:
+∀x [(AbnormalNoise(x) ∧ LowOil(x)) → LubricationProblem(x)]
+
+R5:
+∀x [(LowMileage(x) ∧ HighFuelConsumption(x)) → FuelSystemProblem(x)]
+
+FACTS
+
+Overheating(car1)
+LowCoolant(car1)
+WarningLight(car1)
+
+StartingFailure(car2)
+WeakBattery(car2)
+
+AbnormalNoise(car3)
+LowOil(car3)
+
+LowMileage(car4)
+HighFuelConsumption(car4)
+
+EXAMPLE
+
+Overheating(car1) and LowCoolant(car1) satisfy R1.
+Therefore:
+CoolingSystemFailure(car1)
